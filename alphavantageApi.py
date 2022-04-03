@@ -15,6 +15,6 @@ response = requests.get('https://www.alphavantage.co/query?',
                         })
 
 data = response.json()
-prices = data.get('Time Series(15min)')
+prices = data.get('Time Series (15min)')
 volume = [int(price.get('5. volume')) for date, price in prices.items()]
 pprint(sorted(volume))
